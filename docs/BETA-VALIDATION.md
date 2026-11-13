@@ -1,8 +1,21 @@
-# PDFfy 0.1.0-beta.1 — candidate validation
+# PDFfy 0.1.0-beta.1 — validation and publication status
 
-Recorded November 13, 2026. The checks below used synthetic fixtures and the actual installed development plugin in **Figma Desktop on macOS**, followed by independent inspection of saved PDFs. Local validation passed for these cases. GitHub hosted CI, a GitHub release, and Figma Community publication were still pending when this record was written.
+Recorded November 13, 2026. The checks below used synthetic fixtures and the actual installed development plugin in **Figma Desktop on macOS**, followed by independent inspection of saved PDFs. A separate creator-run submitted-build check is recorded below. Local validation passed for these cases, exact-commit hosted CI passed, and the GitHub beta prerelease is published. Figma received the submission, but **review remains pending**; public availability and installation by other users are not verified.
 
 This record extends the earlier [development-preview validation](PDFFY-VALIDATION.md): the installed plugin workflow, native undo/cancellation, and an import → export round trip have now been exercised. It does not establish identical conversion for every PDF, font, platform, or PDF viewer.
+
+## Release status
+
+| Destination or check | Verified state |
+| --- | --- |
+| Source/tag | Commit `362cbdabe861b07f63426fe13232c41321a417b9`, tag `v0.1.0-beta.1` |
+| Hosted CI | [Exact release-commit run passed](https://github.com/iamdbuko/PDFfy/actions/runs/43507908772) |
+| GitHub | [0.1.0-beta.1 prerelease published](https://github.com/iamdbuko/PDFfy/releases/tag/v0.1.0-beta.1) |
+| Figma submission | [Version 1](https://www.figma.com/community/plugin/1703175034563542365), dated November 13, 2026; submitted, awaiting review |
+| Submitted-build creator access | Import, internal prototype navigation and saved-PDF check passed |
+| Public Community availability/general-user installation | Not verified while Figma review is pending |
+
+See the [publication record](releases/v0.1.0-beta.1-publication.json). This documentation update does not alter the tagged release, source archive or historical build record.
 
 ## Automated checks
 
@@ -39,6 +52,18 @@ The linked two-file batch was separately exported as **Rasterized / sRGB / 72 dp
 
 The detailed local inspection reports remain in ignored `test-results/beta-native/`; only aggregate results and synthetic screenshots are published here. Private Figma file and node identifiers are omitted.
 
+## Creator-run submitted-build check
+
+After submission, the creator launched the submitted plugin through Figma Community's **Open in → file → Run** flow. This was separate from the local development-plugin checks above and does not establish access for other users while review is pending.
+
+- Editable import created two correctly sized/rotated pages with **7 text layers, 6 vector layers, 2 images and 2 link hotspots**: one URL and one internal-page target.
+- In Figma's prototype viewer, clicking the imported internal hotspot on page one navigated to the rotated second page.
+- The saved PDF retained page dimensions **360 × 240** and **180 × 280**, all seven source text runs, vector content and images.
+- Independent inspection confirmed the exact external URL and an internal `/Dest` targeting the actual second page with `/Fit`. Maximum link-rectangle error was **0.00000312 pt**.
+- Both PDF renders were reviewed with no missing content, wrong rotation, clipping or overlap. The known text-metric, JPEG and extraction-spacing differences below remain applicable.
+
+This verifies the creator-access submitted build's covered behavior. Public listing access and installation by a general user remain unverified.
+
 ## Fidelity warnings observed
 
 - Text baselines differed from the source by a few points. Font metrics and substitutions can change typography; this round trip is not lossless text reconstruction.
@@ -50,8 +75,8 @@ The detailed local inspection reports remain in ignored `test-results/beta-nativ
 
 ## Remaining verification boundaries
 
-Native internal-page hyperlink navigation has not yet been exercised in this beta workflow; the linked native fixture contains external URLs only. Internal destinations remain covered by automated parser/controller and exporter tests. Other operating systems and the Figma browser environment have not received the same native end-to-end check.
+Native internal-page prototype navigation and the exported PDF's internal destination passed in the creator-run submitted-build check above. Other operating systems and the Figma browser environment have not received the same native end-to-end check. General-user Community installation still requires verification after Figma review completes.
 
 This beta does not implement OCR, automatic paragraph/auto-layout reconstruction, interactive PDF form editing, other Figma editors, or embedded ICC profile matching during import. Some fonts, masks, blend modes, patterns, gradients, clipping modes, and other complex PDF features remain unsupported in Editable layers mode. Page images are an explicit alternative, subject to the documented resource limits. See the [feature comparison](IMPORT-COMPARISON.md) and [README](../README.md).
 
-A successful local candidate check does not confirm remote CI, release creation, or Community availability. Those publication results must be recorded separately after verification.
+Exact-commit remote CI and GitHub prerelease publication are verified separately from local tests. Figma submission receipt and creator-access execution do not confirm public Community availability. Keep the review-pending state explicit until public access and general-user installation are verified.

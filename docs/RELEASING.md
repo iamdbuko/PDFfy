@@ -45,3 +45,5 @@ The GitHub Actions workflow includes this check. Confirm it passes for the exact
 ## Publishing
 
 Publishing is a separate action. Use PDFfy's assigned plugin ID, the `iamdbuko/PDFfy` repository and the exact tested release checkout. Update version numbers, screenshots, help and release notes together. Publish an immutable semantic tag and GitHub prerelease with the source ZIP and checksum. Then publish through Figma Desktop, verify the public listing and test the Community-installed plugin. Record publication evidence in a later documentation-only commit without moving the tag. Preserve the original Figma-to-PDF project and release identity.
+
+If Figma places a new plugin in review, record the submission receipt and private listing status separately from public availability. A creator-run submitted build can be tested through the listing, but does not prove general-user installation. Finish that check once Figma approves the submission.

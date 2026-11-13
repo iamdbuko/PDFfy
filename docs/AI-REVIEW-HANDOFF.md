@@ -4,9 +4,11 @@
 
 Review the combined **PDF to Figma / Figma to PDF** beta for functional correctness, fidelity, cancellation, resource handling and exporter regressions. Identify concrete triggers and observable failures; separate verified defects from unsupported features and missing evidence.
 
-The public repository is [iamdbuko/PDFfy](https://github.com/iamdbuko/PDFfy). At this preparation checkpoint on November 13, 2026, version **0.1.0-beta.1** is set in the package files. The public repository has been created and the local repository initialized on `main`. Figma assigned PDFfy ID **`1703175034563542365`**, saved in the manifest. Its beta listing form is prepared but **not published**. First-release source push, exact-candidate hosted CI, GitHub release, Figma publication and Community-installed verification are still pending.
+The public repository is [iamdbuko/PDFfy](https://github.com/iamdbuko/PDFfy). The [**0.1.0-beta.1 GitHub prerelease**](https://github.com/iamdbuko/PDFfy/releases/tag/v0.1.0-beta.1) is published from commit `362cbdabe861b07f63426fe13232c41321a417b9`, tagged `v0.1.0-beta.1`. [CI passed for that exact commit](https://github.com/iamdbuko/PDFfy/actions/runs/43507908772).
 
-Read [PROJECT_MEMORY.md](../PROJECT_MEMORY.md), [README.md](../README.md) and [RELEASING.md](RELEASING.md). The [development-preview validation](PDFFY-VALIDATION.md) is historical evidence for the earlier build. The updated beta full local suite passed **340/340 tests** after the upstream and renderer corrections. The current generated build also passed the actual Desktop plugin's covered core flow and independent saved-output checks. See [BETA-VALIDATION.md](BETA-VALIDATION.md); hosted CI, publication and Community-installed verification remain pending.
+Figma received the [PDFfy submission](https://www.figma.com/community/plugin/1703175034563542365), ID `1703175034563542365`, for Version 1 dated November 13, 2026. **Review remains pending**. The creator can run the submitted build, but public availability and installation by other users are not verified. The [publication record](releases/v0.1.0-beta.1-publication.json) distinguishes those states.
+
+Read [PROJECT_MEMORY.md](../PROJECT_MEMORY.md), [README.md](../README.md) and [RELEASING.md](RELEASING.md). The [development-preview validation](PDFFY-VALIDATION.md) is historical evidence for the earlier build. The updated beta full local suite passed **340/340 tests** after the upstream and renderer corrections. The actual Desktop plugin's covered core flow and independent saved-output checks passed. The creator-run submitted build also passed the focused import/navigation/export check below. See [BETA-VALIDATION.md](BETA-VALIDATION.md); general-user Community availability remains unverified while review is pending.
 
 ## Upstream provenance and synchronization
 
@@ -70,7 +72,11 @@ The renderer's focused suite reached 14 passing tests after font-weight and nonr
 | Cancellation | A 40-page import cancelled during page two left no partial artifacts; the three preceding sections remained and controls unlocked |
 | Saved exports | RGB and CMYK exports and raster sRGB output independently inspected |
 
-These are scoped development-plugin results, not a Community-installed test. Text-metric differences and JPEG artifacts are recorded limitations, not hidden by a blanket visual-fidelity claim. Detailed local round-trip and batch-link checks remain in ignored test results; [BETA-VALIDATION.md](BETA-VALIDATION.md) records safe aggregate evidence. Hosted CI and release verification remain pending; do not add unverified hashes, CI URLs or publication claims.
+These tabled results cover the development plugin. A separate creator-access check subsequently ran the submitted build through Community's **Open in → file → Run** flow. It imported two mixed-size/rotated pages containing seven text layers, six vectors, two images and URL/internal link hotspots. Clicking the internal hotspot in Figma's prototype viewer navigated from the first page to the rotated second page.
+
+The submitted build's saved PDF independently passed checks for both page dimensions (360 × 240 and 180 × 280), all seven source text runs, vectors/images, the exact external URL and an internal `/Dest` targeting the actual second page with `/Fit`. Maximum link-rectangle error was 0.00000312 pt. Both renders showed no missing content, wrong rotation, clipping or overlap. Text-metric, JPEG and extraction-spacing differences remain documented; this is not a lossless-fidelity claim.
+
+Detailed reports remain in ignored test results; [BETA-VALIDATION.md](BETA-VALIDATION.md) and the [publication record](releases/v0.1.0-beta.1-publication.json) contain safe aggregate evidence. Exact-commit hosted CI and GitHub release are verified. The submitted-build check is creator-access evidence, not a claim of public availability or general-user installation.
 
 Use Node.js 22.13+ or 24+. From the repository root:
 
@@ -86,7 +92,7 @@ git diff --exit-code -- code.js ui.html licenses/
 
 Review `tests/pdf-import.test.js`, `tests/import-protocol.test.js` and `tests/import-ui.test.js` together: renderer assertions, mocked protocol checks and browser UI behavior cover different boundaries. Also retain the complete exporter suite, especially image-resolution/assembly, links, protocol, controls, profiles, CMYK and lifecycle cases.
 
-For future candidate changes and the Community-installed check, repeat the affected Desktop paths: editable/image imports, protected PDF retry/skip, page ranges/batch arrangement, font choices/remapping, cancellation, mode retention and export of an imported synthetic sample. Inspect created Figma layers, then saved PDF geometry, links, text/vector/image content and rendered output. Neither a download nor an API bridge smoke test alone establishes that end-to-end path.
+For future candidate changes and the post-review general-user check, repeat the affected Desktop paths: editable/image imports, protected PDF retry/skip, page ranges/batch arrangement, font choices/remapping, cancellation, mode retention and export of an imported synthetic sample. Inspect created Figma layers, then saved PDF geometry, links, text/vector/image content and rendered output. Neither a download nor an API bridge smoke test alone establishes that end-to-end path.
 
 Use isolated preview outputs when a development plugin is running; [RELEASING.md](RELEASING.md) documents both UI and backend destinations. Keep private designs, identifiers, paths and detailed outputs out of source, review reports and archives. Share synthetic fixtures, safe screenshots and aggregate results; local `test-results/` and `releases/` are ignored.
 
@@ -94,6 +100,6 @@ Report findings with source location, triggering input/action, expected versus a
 
 ## Release evidence to record
 
-Follow PDFfy's own [release workflow](RELEASING.md), not the original exporter's publishing destination. Use the newly assigned PDFfy identity `1703175034563542365`. The first beta still requires reviewed public source, a tested exact commit, hosted CI, an immutable GitHub tag/archive/checksum, Figma publication/listing verification and a Community-installed check.
+Follow PDFfy's own [release workflow](RELEASING.md), not the original exporter's publishing destination. Preserve PDFfy identity `1703175034563542365`. The first beta's public source, exact-commit CI, immutable GitHub prerelease and Figma submission are recorded. Figma review, public listing availability and installation by a general user remain to be verified.
 
-Record each destination independently. Preserve published tags and archives; add subsequent publication/installed-version evidence through a documentation-only update. Until those checks finish, leave their status pending in this handoff and project memory.
+Record each destination independently. Preserve the published tag and archive; this status update does not change their historical contents. Add subsequent review/public-availability evidence through a documentation-only update and keep unresolved states explicit.

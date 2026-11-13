@@ -8,6 +8,10 @@ A separate, offline plugin built from the published Figma-to-PDF v9.0.2 source, 
 
 Source and issue reporting: [iamdbuko/PDFfy](https://github.com/iamdbuko/PDFfy). See [beta validation](docs/BETA-VALIDATION.md) for tested behavior, known fidelity differences and publication status.
 
+The [0.1.0-beta.1 GitHub prerelease](https://github.com/iamdbuko/PDFfy/releases/tag/v0.1.0-beta.1) is available, and [CI passed for its exact source commit](https://github.com/iamdbuko/PDFfy/actions/runs/43507908772). The [Figma submission](https://www.figma.com/community/plugin/1703175034563542365) was submitted for Version 1 on November 13, 2026, but **review is pending**. Public Community availability and installation by other users are not yet verified; use the local installation instructions below meanwhile.
+
+The creator ran the submitted build through Figma's Community launch flow and verified an editable import, prototype navigation to an internal page, and the saved two-page PDF. This creator-access check is distinct from general-user availability. See the [publication record](docs/releases/v0.1.0-beta.1-publication.json) for the release and verification scope.
+
 ## Install locally
 
 1. In Figma Desktop, open a design file with editing and plugin access.

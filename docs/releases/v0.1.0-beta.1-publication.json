@@ -1,0 +1,152 @@
+{
+  "version": "0.1.0-beta.1",
+  "recordedAtUtc": "2026-11-13T21:19:48.936846+00:00",
+  "status": "GitHub prerelease published; Figma Community submission received and awaiting review",
+  "source": {
+    "repository": "https://github.com/iamdbuko/PDFfy",
+    "commit": "362cbdabe861b07f63426fe13232c41321a417b9",
+    "tag": "v0.1.0-beta.1",
+    "annotatedTagObject": "691aea160efb4446ec2d703cf9827d78180dc8a9",
+    "tagTargetVerifiedOnGitHub": true
+  },
+  "validation": {
+    "localTests": {
+      "passed": 340,
+      "failed": 0
+    },
+    "ci": {
+      "url": "https://github.com/iamdbuko/PDFfy/actions/runs/43507908772",
+      "conclusion": "success",
+      "commit": "362cbdabe861b07f63426fe13232c41321a417b9",
+      "generatedRuntimeReproducible": true
+    },
+    "preSubmissionEvidence": "../BETA-VALIDATION.md"
+  },
+  "githubRelease": {
+    "url": "https://github.com/iamdbuko/PDFfy/releases/tag/v0.1.0-beta.1",
+    "prerelease": true,
+    "archive": {
+      "name": "PDFfy-v0.1.0-beta.1.zip",
+      "bytes": 6009449,
+      "sha256": "64c9de17b8761fd3fca54199a7f21af33662ba76a99226b79062525a51149f63",
+      "githubAssetDigestMatches": true,
+      "zipIntegrityPassed": true,
+      "archiveRuntimeMatchesCheckout": true
+    },
+    "checksumAsset": "SHA256SUMS.txt"
+  },
+  "figma": {
+    "pluginId": "1703175034563542365",
+    "name": "PDFfy \u2014 PDF to Figma & Figma to PDF (Beta)",
+    "listing": "https://www.figma.com/community/plugin/1703175034563542365",
+    "version": 1,
+    "versionDate": "2026-11-13",
+    "state": "in_review",
+    "submissionReceived": true,
+    "publicAvailabilityVerified": false,
+    "observedListingNotice": "This page is private for now. Only you can see it while your plugin is in review.",
+    "networkAccess": "none",
+    "creatorRunSubmittedBuildVerified": true,
+    "launchRoute": "Community listing \u2192 Open in \u2192 synthetic test file \u2192 Run; not the Development menu"
+  },
+  "submittedBuildSmoke": {
+    "platform": "macOS Figma Desktop",
+    "fixture": "tests/fixtures/pdffy-beta-smoke.pdf",
+    "import": {
+      "pages": 2,
+      "dimensions": [
+        [
+          360,
+          240
+        ],
+        [
+          180,
+          280
+        ]
+      ],
+      "textLayers": 7,
+      "vectorLayers": 6,
+      "imageLayers": 2,
+      "urlLinks": 1,
+      "includedPageLinks": 1,
+      "nativeFonts": "Helvetica Regular",
+      "internalPrototypeClickNavigatedToPage2": true
+    },
+    "export": {
+      "mode": "Vector",
+      "color": "As file",
+      "dpi": 72,
+      "output": "Single PDF",
+      "bytes": 74860,
+      "sha256": "c500dddabfe2f3038c9d972c4edd550b67ca1ec019665a5c3ce3bbefff537e5f",
+      "checks": {
+        "two_pages": true,
+        "display_geometry_preserved": true,
+        "seven_text_runs": true,
+        "all_seven_source_text_strings_present_ignoring_extraction_whitespace": true,
+        "vectors_on_both_pages": true,
+        "one_24x16_image_on_each_page": true,
+        "external_url_preserved": true,
+        "internal_destination_is_second_pdf_page_fit": true,
+        "exactly_two_links_on_first_page_none_on_second": true,
+        "link_rectangles_within_0_00001_pt": true
+      },
+      "maxLinkRectangleErrorPt": 3.1127929815966127e-06,
+      "rasterCompressionSetting": "PNG",
+      "rasterCompressionSettingActiveInVectorMode": false
+    },
+    "visualReview": {
+      "renderer": "Poppler144dpi with system Helvetica",
+      "source_and_output_pages_reviewed": 4,
+      "missing_content_wrong_rotation_clipping_or_overlap": false,
+      "known_differences": [
+        "Text baselines shift a few points because reconstructed Figma text metrics differ from PDF metrics.",
+        "Native Figma vector export turns the tiny source PNG into JPEG; compression artifacts remain visible in the low-resolution test image.",
+        "Figma outline plus nonpainting Type3 metadata preserves searchable strings, but extraction whitespace and reading order differ from source. Poppler reports Type3 bounding-box warnings without visible missing glyphs."
+      ],
+      "pixel_metrics": [
+        {
+          "page": 1,
+          "size_px": [
+            720,
+            480
+          ],
+          "mean_absolute_rgb_error_0_255": 6.95896
+        },
+        {
+          "page": 2,
+          "size_px": [
+            360,
+            560
+          ],
+          "mean_absolute_rgb_error_0_255": 4.78188
+        }
+      ]
+    }
+  },
+  "runtimeArtifacts": {
+    "manifest.json": {
+      "bytes": 342,
+      "sha256": "4c0335c89689cd7d7a6d6f501b572696cd0b5b1a3100f2967f1c1ae97f2237da"
+    },
+    "code.js": {
+      "bytes": 64012,
+      "sha256": "f7f0021c7b675d460a44541913468ad748de95b3e3b27e10ae19a6d9da4ef1d7"
+    },
+    "ui.html": {
+      "bytes": 8831123,
+      "sha256": "b8b4e0ef3aa97dcae685af4169435adc10e0428a063fb9275b219190407bd2c2"
+    },
+    "package-lock.json": {
+      "bytes": 96917,
+      "sha256": "16995f9e4a937040958f962d00a8e0febc7a9900862a6c4da4cf9f8d004aa9ad"
+    }
+  },
+  "remaining": [
+    "Figma Community review approval and public availability",
+    "General-user installation after review approval",
+    "Non-macOS platforms and browser workflows",
+    "Arbitrary-document fidelity and full competitor feature parity"
+  ],
+  "releasePolicy": "This evidence is recorded after submission in a documentation-only commit. The tested semantic tag and original source archive remain unchanged."
+}
