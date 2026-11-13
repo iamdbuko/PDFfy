@@ -1,0 +1,50 @@
+{
+  "plugin": "PDFfy (PDF to Figma & Figma to PDF)",
+  "version": "0.1.0",
+  "status": "local development preview",
+  "recordedAt": "2026-11-13T20:04:06.464669+00:00",
+  "fullSuite": {
+    "tests": 336,
+    "passed": 336,
+    "failed": 0
+  },
+  "finalAffectedChecks": {
+    "tests": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "backendSyntax": "passed",
+  "isolatedPreviewBuild": "passed; canonical bytes and mtimes unchanged; both preview outputs byte-identical",
+  "liveFigma": {
+    "method": "API bridge adapter; not installed plugin end-to-end",
+    "nodes": {
+      "TEXT": 5,
+      "VECTOR": 4,
+      "RECTANGLE": 2
+    },
+    "fontSubstitution": "Helvetica Regular to Arial Regular",
+    "pageFrameCount": 2,
+    "source": "synthetic regression fixture; private workspace identifiers omitted"
+  },
+  "originalExporterBackendSha256": "830cdf4f7aeaa31ef0225ba289c5c058959346bef3e8092934848f99a6b57607",
+  "artifacts": {
+    "code.js": {
+      "bytes": 64012,
+      "sha256": "f7f0021c7b675d460a44541913468ad748de95b3e3b27e10ae19a6d9da4ef1d7"
+    },
+    "ui.html": {
+      "bytes": 8827797,
+      "sha256": "143e68647b3be6b7e1c900550eeb3ec2f62f7e85d7397c13122cc5f099e8b6f8"
+    },
+    "manifest.json": {
+      "bytes": 337,
+      "sha256": "a589d023ea86aecd1167fc9b35d079e0e0d3dcb26b7d8618b651ff26feb3f6e2"
+    },
+    "package-lock.json": {
+      "bytes": 96903,
+      "sha256": "11fe54201a71f07e33a7b04ca27c53559f8bc40c5b2c47648d45759927c58992"
+    }
+  },
+  "published": false,
+  "hostedCIRun": false
+}

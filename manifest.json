@@ -1,0 +1,18 @@
+{
+  "name": "PDFfy — PDF to Figma & Figma to PDF (Beta)",
+  "id": "1703175034563542365",
+  "documentAccess": "dynamic-page",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma"
+  ],
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}

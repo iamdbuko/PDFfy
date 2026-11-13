@@ -1,0 +1,16 @@
+✔ offline native PDF preview and vector import preserve outlined text without duplicating hidden search text (1354.886708ms)
+✔ page-image import encodes the selected density without changing Figma page dimensions (1038.05975ms)
+✔ invalid page ranges block import and a corrected range imports the requested real page (839.941458ms)
+✔ in-flight imports lock mode switching and cancellation releases the UI without finishing (902.030959ms)
+✔ batch PDFs retain separate names and honor grid arrangement in one acknowledged import (833.246875ms)
+✔ removing and clearing loaded PDFs releases their documents and allows another import (947.525083ms)
+✔ the distributed UI carries complete applicable dependency notices (21.99025ms)
+✔ runtime notices normalize line endings and cannot end their script or comment (10.348291ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6212.170042

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#f5f5f2"/>
+<g font-family="Arial, sans-serif" fill="#171717">
+<rect x="96" y="86" width="78" height="78" rx="18" fill="#171717"/>
+<path d="M113 113h42m-11-10 11 10-11 10M157 138h-42m11-10-11 10 11 10" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="198" y="144" font-size="66" font-weight="700" letter-spacing="-3">PDFfy</text>
+<rect x="1560" y="98" width="264" height="58" rx="29" fill="#e0e4da"/>
+<text x="1692" y="136" text-anchor="middle" font-size="24" letter-spacing="3">PUBLIC BETA</text>
+<text x="96" y="385" font-size="116" font-weight="700" letter-spacing="-6">PDF ↔ Figma</text>
+<text x="101" y="478" font-size="53" letter-spacing="-1">Import. Edit. Export.</text>
+<text x="102" y="586" font-size="31" fill="#686864">One plugin for both directions.</text>
+<text x="102" y="638" font-size="31" fill="#686864">Editable layers or page images.</text>
+<text x="102" y="690" font-size="31" fill="#686864">PDF export with links.</text>
+<rect x="96" y="894" width="474" height="64" rx="32" fill="#171717"/>
+<text x="333" y="936" text-anchor="middle" font-size="26" fill="white">Local conversion · No upload service</text>
+<g transform="translate(1090 268) rotate(-5 250 300)"><rect width="475" height="610" rx="22" fill="#deded8"/><rect x="-18" y="-18" width="475" height="610" rx="22" fill="white" stroke="#deded8" stroke-width="2"/>
+<text x="24" y="41" font-size="22" fill="#777">DOCUMENT.PDF</text><rect x="24" y="76" width="389" height="176" rx="8" fill="#dfe7e3"/>
+<circle cx="216" cy="164" r="60" fill="#32826b"/><path d="M153 220 216 109l64 111" fill="#e9d982"/>
+<rect x="24" y="290" width="260" height="19" rx="5" fill="#171717"/><rect x="24" y="331" width="348" height="11" rx="5" fill="#b7b7b2"/><rect x="24" y="358" width="316" height="11" rx="5" fill="#b7b7b2"/><rect x="24" y="385" width="332" height="11" rx="5" fill="#b7b7b2"/><rect x="24" y="438" width="174" height="92" rx="7" fill="#f0e6d0"/><rect x="218" y="438" width="195" height="92" rx="7" fill="#e0e8e3"/></g>
+<g transform="translate(1332 408) rotate(6 200 230)"><rect width="425" height="482" rx="20" fill="white" stroke="#bcbcb6" stroke-width="2"/>
+<text x="30" y="49" font-size="22" fill="#777">EDITABLE IN FIGMA</text><rect x="29" y="89" width="366" height="154" rx="7" fill="#dfe7e3"/>
+<rect x="28" y="88" width="368" height="156" fill="none" stroke="#2979e6" stroke-width="3"/><g fill="white" stroke="#2979e6" stroke-width="3"><rect x="23" y="83" width="10" height="10"/><rect x="391" y="83" width="10" height="10"/><rect x="23" y="239" width="10" height="10"/><rect x="391" y="239" width="10" height="10"/></g>
+<circle cx="210" cy="166" r="52" fill="#32826b"/><path d="M156 214 210 118l54 96" fill="#e9d982"/>
+<text x="30" y="302" font-size="35" font-weight="700">Make it yours.</text><text x="30" y="354" font-size="21" fill="#777">Text · Vectors · Images</text><rect x="30" y="396" width="365" height="49" rx="8" fill="#171717"/><text x="212" y="429" text-anchor="middle" font-size="21" fill="white">Export to PDF ↗</text></g>
+<text x="1824" y="1011" text-anchor="end" font-size="24" fill="#777">PDF to Figma &amp; Figma to PDF</text>
+</g></svg>

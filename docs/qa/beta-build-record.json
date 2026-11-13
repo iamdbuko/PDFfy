@@ -1,0 +1,96 @@
+{
+  "version": "0.1.0-beta.1",
+  "figmaPluginId": "1703175034563542365",
+  "status": "tested candidate; publication pending",
+  "automated": {
+    "passed": 340,
+    "failed": 0
+  },
+  "nativeDesktop": {
+    "installedDevelopmentPlugin": true,
+    "editableImport": {
+      "pages": 2,
+      "pageDimensions": [
+        [
+          360,
+          240
+        ],
+        [
+          180,
+          280
+        ]
+      ],
+      "textLayers": 5,
+      "vectorLayers": 4,
+      "imageLayers": 2,
+      "gridColumns": 2,
+      "pageGap": 40,
+      "rotatedTextDegrees": -90
+    },
+    "rangeValidation": true,
+    "fontDetection": true,
+    "remappedTextLayers": 5,
+    "batchImport": true,
+    "incorrectPasswordRetry": true,
+    "urlHotspots": 10,
+    "pageImage": {
+      "frame": [
+        600,
+        400
+      ],
+      "pixels": [
+        1200,
+        800
+      ],
+      "textLayers": 0
+    },
+    "undoRemovedOnlyLastImport": true,
+    "cancelledLongImport": {
+      "sourcePages": 40,
+      "observedPage": 2,
+      "artifactsAfterCancel": 0,
+      "priorSectionsPreserved": 3,
+      "uiUnlocked": true
+    }
+  },
+  "roundtrip": {
+    "rgbVector": true,
+    "cmykVector": true,
+    "rasterSRGB": true,
+    "pageGeometryRetained": true,
+    "textAndVectorsRetained": true,
+    "uriLinksRetained": 10,
+    "maxLinkRectangleErrorPt": 4.0429688397125574e-07,
+    "cmykChannels": 4,
+    "cmykProfileMatchesBundled": true,
+    "catalogOutputIntent": false
+  },
+  "fidelityWarnings": [
+    "Small text baseline differences",
+    "Native Figma PDF export JPEG artifacts in a tiny image",
+    "CMYK visual color differences; not a physical print proof"
+  ],
+  "notYetVerified": [
+    "Community-installed version",
+    "Native internal-link navigation",
+    "Non-macOS platforms"
+  ],
+  "artifacts": {
+    "manifest.json": {
+      "bytes": 342,
+      "sha256": "4c0335c89689cd7d7a6d6f501b572696cd0b5b1a3100f2967f1c1ae97f2237da"
+    },
+    "code.js": {
+      "bytes": 64012,
+      "sha256": "f7f0021c7b675d460a44541913468ad748de95b3e3b27e10ae19a6d9da4ef1d7"
+    },
+    "ui.html": {
+      "bytes": 8831123,
+      "sha256": "b8b4e0ef3aa97dcae685af4169435adc10e0428a063fb9275b219190407bd2c2"
+    },
+    "package-lock.json": {
+      "bytes": 96917,
+      "sha256": "16995f9e4a937040958f962d00a8e0febc7a9900862a6c4da4cf9f8d004aa9ad"
+    }
+  }
+}
